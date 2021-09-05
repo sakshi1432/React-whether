@@ -1,0 +1,116 @@
+*{
+  box-sizing: border-box;
+}
+
+.main{
+  display:flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  height:80vh;
+  width:100vw;
+}
+
+.main .two{
+  
+  margin-top: 5px;
+ background-image: url('https://static.wixstatic.com/media/ddf0df_0caad172cdce45f19c9c45306f4e0b8d~mv2.gif');
+  width:500px;
+  height: 58vh;
+  box-shadow: 10px  10px 5px 10px #aaaaaa;
+  text-align: center;
+  color:black;
+  opacity: 0.8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.type-city{
+  display:inline-block;
+  position: relative;
+  color: white;
+  
+}
+
+.type-city .rounded {
+  border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 20px;
+  border-radius: 25px;
+	-moz-box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+	box-shadow: 2px 2px 3px #666;
+	font-size: 20px;
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+}
+
+.rounded:focus {
+	border-color: #339933;
+}
+
+button {
+  background-color:transparent;
+  border:0;
+}
+
+button {
+position: absolute;
+/* Adjust these two to your liking */
+top: 6px;
+right: 3px;
+}
+
+
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top : 200px}
+  
+}
+
+.k {
+ font-size: 50px;
+ position: relative;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  0%   {left: 0px;}
+  25%  {left: 20px;}
+  75%  {right: 0px}
+  100% {right: 20px;}
+}
+
+
+ @media only screen and (max-width:874px){
+  .main .two {
+    width: 230px;
+    background-size: 256px 379px;
+  }
+}
+
+@media only screen and (max-width:537px){
+  .main .two {
+    width: 200px;
+    background-size: 161px 379px;
+  }
+}
+@media only screen and (max-width:874px){
+  .type-city .rounded {
+    max-width: 145px;
+    font-size: 17px;
+ }
+}  
+@media only screen and (max-width:874px){
+  .k {
+    font-size: 30px;
+  }
+  .location {
+    font-size: 19px;
+  }
+}
