@@ -26,7 +26,7 @@ function Ny() {
     
 useEffect(() => {
          const  fetchApi = async () =>{
-                const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=081cd00848d70ac82d86270a169f8db6`;
+                const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=081cd00848d70ac82d86270a169f8db6`;
                 const response = await fetch(url);
                 const resjson = await response.json();
                 // console.log(resjson);
@@ -72,7 +72,7 @@ useEffect(() => {
              <button><FiX onClick = {() => setCity(" ")}/></button>
            </div>  
              {!te ? (
-            <div>
+            <div className = "co">
                <h2>No data</h2> 
                <h3><i class="fas fa-undo-alt"></i>No data to show you</h3>
                 
@@ -84,9 +84,9 @@ useEffect(() => {
                   <span className = "k"><i class="fas fa-street-view "></i> </span> {city}
                 </h3>
              <div>
-            <h3 className = "tem">{te.temp} cel</h3>
+            <h3 className = "tem">{te.temp}&deg;cel</h3>
              <span className= "te">humidity {te.humidity}</span><br></br>
-             <span className ="tempmin_max">Min:{te.temp_min} Cel | Max: {te.temp_max} Cel </span>
+             <span className ="tempmin_max">Min:{te.temp_min}&deg;Cel | Max: {te.temp_max}&deg;Cel </span>
          </div>
  
             </div>)
